@@ -361,8 +361,8 @@ def menu_like():
                 hashtags = input("Insert hashtags separated by spaces\nExample: cat dog\nwhat hashtags?\n").strip().split(' ')
             else:
                 hashtags.append(random.choice(bot.read_list_from_file(hashtag_file)))
-            for hashtag in hashtags:
-                bot.like_hashtag(hashtag)
+            #for hashtag in hashtags:
+            bot.like_hashtag(hashtags)
 
         elif ans == "2":
             print("""
