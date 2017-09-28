@@ -417,7 +417,7 @@ def menu_comment():
     while ans:
         print("""
         1. Comment from hashtag
-        2. Comment spesific user media
+        2. Comment specific user media
         3. Comment userlist
         4. Comment our timeline
         5. Main menu
@@ -430,11 +430,11 @@ def menu_comment():
             2.Use hashtag database
             """)
             if "1" in sys.stdin.readline():
-                hashtag = input("what?").strip()
+                hashtag = input("what?")
             else:
                 hashtag = random.choice(bot.read_list_from_file(hashtag_file))
-            for hashtags in hashtag:
-                bot.comment_hashtag(hashtags)
+            #for hashtags in hashtag:
+            bot.comment_hashtag(hashtag)
 
         elif ans == "2":
             print("""
